@@ -110,7 +110,7 @@ with model:
 
     # image to predict
 
-    images_to_predict_list = glob.glob("images_to_predict/*")
+    images_to_predict_list = glob.glob("res/images_to_predict/*")
     # print(images_to_predict_list[0])
     st.header('Prediction Examples')
     img_mod, colors_mod1, colors_mod2 = st.columns(3, gap="large")
