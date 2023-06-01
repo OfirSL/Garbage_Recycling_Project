@@ -12,17 +12,13 @@ dataset = st.container()
 modelVal = st.container()
 model = st.container()
 your_image = st.container()
-# @st.cache_data
-# def load_model(path):
-#     model1 = YOLO(path) # "./runs/detect/train/weights/best.pt
-#     return model1
 
 
 # Load YOLO model and make predictions
 def predict_model(model, img_in, conf):
     # Model paths
-    model1_path = "yolov8n_EcoVision_full/runs/detect/train/weights/best.pt"
-    model2_path = "yolov8n_EcoVision_with_augmentations/runs/detect/train/weights/best.pt"
+    model1_path = "res/yolov8n_EcoVision_full/runs/detect/train/weights/best.pt"
+    model2_path = "res/yolov8n_EcoVision_with_augmentations/runs/detect/train/weights/best.pt"
 
     # Choose the model based on user selection
     if model == 'aug':
@@ -78,11 +74,11 @@ with dataset:
     if mod_data == 'Original':
         st.image(examples_paths[image_indx0+8])
         st.subheader('Instansces analysis')
-        st.image('yolov8n_EcoVision_full/runs/detect/yolov8n_EcoVision_full7/labels.jpg')
+        st.image('res/yolov8n_EcoVision_full/runs/detect/yolov8n_EcoVision_full7/labels.jpg')
     else:
         st.image(examples_paths[image_indx0])
         st.subheader('Instansces analysis')
-        st.image('yolov8n_EcoVision_with_augmentations/runs/detect/yolov8n_EcoVision_fuller3 - best/labels.jpg')
+        st.image('res/yolov8n_EcoVision_with_augmentations/runs/detect/yolov8n_EcoVision_fuller3 - best/labels.jpg')
 with modelVal:
     st.header('Validation metrics')
     mod_val = st.radio("Selecting a model for the validation metrics overview:", ('Original', 'Augmented'))
@@ -90,18 +86,18 @@ with modelVal:
     if mod_val == 'Original':
         # before augmentations (original)
         st.subheader('Original dataset')
-        st.image('yolov8n_EcoVision_full/val2_conf_0.4_best/confusion_matrix.png')
-        st.image("yolov8n_EcoVision_full/val2_conf_0.4_best/PR_curve.png")
-        st.image("yolov8n_EcoVision_full/val2_conf_0.4_best/F1_curve.png")
+        st.image('res/yolov8n_EcoVision_full/val2_conf_0.4_best/confusion_matrix.png')
+        st.image("res/yolov8n_EcoVision_full/val2_conf_0.4_best/PR_curve.png")
+        st.image("res/yolov8n_EcoVision_full/val2_conf_0.4_best/F1_curve.png")
 
 
 
     # after augmentations
     if mod_val == 'Augmented':
         st.subheader('Augmented dataset')
-        st.image('yolov8n_EcoVision_with_augmentations/runs/detect/yolov8n_EcoVision_fuller3 - best/confusion_matrix.png')
-        st.image("yolov8n_EcoVision_with_augmentations/runs/detect/yolov8n_EcoVision_fuller3 - best/PR_curve.png")
-        st.image("yolov8n_EcoVision_with_augmentations/runs/detect/yolov8n_EcoVision_fuller3 - best/F1_curve.png")
+        st.image('res/yolov8n_EcoVision_with_augmentations/runs/detect/yolov8n_EcoVision_fuller3 - best/confusion_matrix.png')
+        st.image("res/yolov8n_EcoVision_with_augmentations/runs/detect/yolov8n_EcoVision_fuller3 - best/PR_curve.png")
+        st.image("res/yolov8n_EcoVision_with_augmentations/runs/detect/yolov8n_EcoVision_fuller3 - best/F1_curve.png")
 
 with model:
 
