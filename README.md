@@ -10,7 +10,7 @@ The app utilizes the YOLO8n detection and classification computer vision model t
 - Provide users with information on the appropriate methods of disposing of each type of garbage.
 - Raise awareness about waste management and encourage environmentally-friendly practices.
 
-![alt text](https://github.com/OfirSL/Trash_sorting_project/blob/34fcdfaedcc6b82c8216410d85a1e1a21d1d8e0a/extra/Augmented%20model%20predictions.png)
+![alt text](https://github.com/OfirSL/Garbage_Recycling_Project/blob/b027c50c08c23a7e2b566c11022a50fc1cd146b2/res/Augmented%20model%20predictions.png)
 
 ## Streamlit Application
 An overview of the EcoVision trained models is provided by the following Streamlit application:  
@@ -30,7 +30,7 @@ This annotated dataset served as the foundation for training two versions of the
 - *Replacing Background*: Images with a white or single-colored background were replaced with randomly selected colorful background images. This helped introduce variations in the background and improve the model's ability to generalize to different environments.
 
 - *Adding Noise*: Various types of noise were added randomly to the images during augmentation. This included Gaussian noise, jitter, brightness variations, and salt & pepper noise. By introducing such noise, the model became more resilient to noise interference in real-world scenarios.  
-![alt text](https://github.com/OfirSL/Trash_sorting_project/blob/5cabc999265a67e9172e0bd35feb130ace47907c/augmentations_examples/g.png)
+![alt text](https://github.com/OfirSL/Garbage_Recycling_Project/blob/b027c50c08c23a7e2b566c11022a50fc1cd146b2/res/augmentations_examples/g.png)
 
 \* More data augmentation examples can be found in the streamlit app (see above).
 
