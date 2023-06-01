@@ -69,17 +69,16 @@ with dataset:
     st.subheader('Data and augmented data examples:')
     examples_paths = sorted(glob.glob('res/augmentations_examples/*'))
     image_indx0 = st.slider('Examples:', 0, 7, 0)
-
-    mod_data = st.radio("Selecting a model for dataset analysis:", ('Original', 'Augmented'))
+    st.image(examples_paths[image_indx0])
+    
+    st.subheader('Instansces analysis')
+    mod_data = st.radio("Selecting a model for instansces analysis:", ('Original', 'Augmented'))
 
     if mod_data == 'Original':
-        st.image(examples_paths[image_indx0+8])
-        st.subheader('Instansces analysis')
         st.image('res/yolov8n_EcoVision_full/runs/detect/yolov8n_EcoVision_full7/labels.jpg')
     else:
-        st.image(examples_paths[image_indx0])
-        st.subheader('Instansces analysis')
         st.image('res/yolov8n_EcoVision_with_augmentations/runs/detect/yolov8n_EcoVision_fuller3 - best/labels.jpg')
+        
 with modelVal:
     st.header('Validation metrics')
     mod_val = st.radio("Selecting a model for the validation metrics overview:", ('Original', 'Augmented'))
