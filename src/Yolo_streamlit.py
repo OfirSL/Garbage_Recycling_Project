@@ -66,10 +66,11 @@ with dataset:
     in real-world scenarios.
     """)
 
-    mod_data = st.radio("Selecting a model for dataset analysis:", ('Original', 'Augmented'))
     st.subheader('Data and augmented data examples:')
     examples_paths = sorted(glob.glob('res/augmentations_examples/*'))
     image_indx0 = st.slider('Examples:', 0, 7, 0)
+
+    mod_data = st.radio("Selecting a model for dataset analysis:", ('Original', 'Augmented'))
 
     if mod_data == 'Original':
         st.image(examples_paths[image_indx0+8])
