@@ -1,0 +1,11 @@
+path:  /content/drive/MyDrive/FInalProject/Datasets/dataset_for_YOLO/
+train: 'train/images'
+val: 'val/images'
+test: 'test/images'
+
+
+#Classes
+nc: 12
+
+#classes names
+names: ['blue_paper', 'green_general', 'orange_packaging', 'purple_glass', 'cardboard', 'brown_organic', 'deposit_bottles', 'electronics', 'clothing', 'batteries', 'medicines', 'Light_bulbs']
