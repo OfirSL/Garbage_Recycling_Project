@@ -14,7 +14,7 @@ The app utilizes the YOLO8n detection and classification computer vision model t
 
 ## Streamlit Application
 An overview of the EcoVision trained models is provided by the following Streamlit application:  
-https://ofirsl-trash-sorting-project-yolo-streamlit-j4hy7v.streamlit.app/
+https://ofirsl-garbage-recycling-project-srcyolo-streamlit-z2rp9l.streamlit.app/
 
 ## Dataset
 The original dataset consists of thousands of labeled images representing various types of waste materials from different sources.
